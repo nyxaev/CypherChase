@@ -10,7 +10,7 @@ Cypherchase generates a random key, replaces every character with one of several
 - **Multiple codes per character:** frequent characters (`a`, `e`, `o`, space) get more codes, so letter frequencies do not show in the output.
 - **Different output every time:** encrypting the same message twice produces two different results, and both decrypt to the original.
 - **Lossless round trip:** all codes have the same length, so decryption is exact and unambiguous. Emojis, accents, CJK text and any character outside the alphabet are handled through an escape code.
-- **Key file you can share:** the key lives in a plain `chave.json` file. Copy it to decrypt on another machine.
+- **Key file you can share:** the key lives in a plain `key.json` file. Copy it to decrypt on another machine.
 - **Validation and errors:** a malformed key or a message made with a different key produces a clear error instead of garbage.
 - **Built-in self-test:** checks the round trip against fixed and random texts.
 
