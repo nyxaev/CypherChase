@@ -70,31 +70,6 @@ Decrypted: Hello, world!
 - **Replacing it.** Deleting the file or using menu option 5 creates a new key, and messages made with the old one can no longer be decrypted.
 - **Editing it.** You can edit the file by hand. It is validated on load: codes must be unique, all the same length, and different from the escape code.
 
-## Configuration
-
-Edit the settings section at the top of `cypherchase.py`:
-
-| Setting | What it does |
-| --- | --- |
-| `ARQUIVO_CHAVE` | Path of the key file |
-| `TAMANHO_CODIGO` | Length of each code (2 by default, 3 makes the output longer and more opaque) |
-| `ALFABETO_CODIGO` | Symbols used to build codes |
-| `ALFABETO_ORIGINAL` | Characters that get their own codes |
-| `LETRAS_MUITO_FREQUENTES`, `LETRAS_FREQUENTES` | Which characters get more codes |
-| `QTD_ALTA`, `QTD_MEDIA`, `QTD_BAIXA` | How many codes each group gets |
-
-## Using it as a library
-
-```python
-from cypherchase import Cifra, carregar_ou_criar_chave
-
-cipher = Cifra(carregar_ou_criar_chave())
-
-secret = cipher.criptografar("meet me at noon")
-print(secret)
-print(cipher.descriptografar(secret))   # meet me at noon
-```
-
 ## Security notes
 
 Cypherchase is a homophonic substitution cipher. It is much harder to break than a simple letter-for-letter cipher, but it is a hobby project and is **not** a replacement for modern cryptography. For anything sensitive, use a vetted tool such as AES-GCM (for example through the `cryptography` package) or age.
