@@ -25,7 +25,7 @@ Cypherchase generates a random key, replaces every character with one of several
 python cypherchase.py
 ```
 
-On the first run a new key is generated and saved as `chave.json` next to the script. After that, the menu appears:
+On the first run a new key is generated and saved as `key.json` next to the script. After that, the menu appears:
 
 ```
 1 - Encrypt a message
